@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Prologue by HTML5 UP</title>
+		<title>Ephraim Pei - Fullstack Web Developer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -24,8 +24,8 @@
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Jane Doe</h1>
-							<p>Hyperspace Engineer</p>
+							<h1 id="title">Ephraim Pei</h1>
+							<p>Fullstack Web Developer</p>
 						</div>
 
 					<!-- Nav -->
@@ -57,11 +57,9 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.linkedin.com/in/ephraimpei" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/ephraimpei" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:ephraimpei@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 
 				</div>
@@ -76,7 +74,7 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt">Hi! I'm <strong>Prologue</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
+								<h2 class="alt">Hi! I'm <strong>Ephraim</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
 								site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>
 								<p>Ligula scelerisque justo sem accumsan diam quis<br />
 								vitae natoque dictum sollicitudin elementum.</p>
@@ -183,7 +181,7 @@
 							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
 							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
 
-							<form method="post" action="#">
+							<form method="POST" name="contactform" action="contact-form-handler.php">
 								<div class="row">
 									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
 									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
@@ -206,7 +204,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Ephraim Pei. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</div>
@@ -217,8 +215,21 @@
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+
 			<script src="assets/js/main.js"></script>
+
+			<script>
+			// Code for validating the form
+			// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+			// for details
+			var frmvalidator  = new Validator("contactform");
+			frmvalidator.addValidation("name","req","Please provide your name");
+			frmvalidator.addValidation("email","req","Please provide your email");
+			frmvalidator.addValidation("email","email","Please enter a valid email address");
+			</script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/gen_validatorv31.js"></script>
 
 	</body>
 </html>
+``
