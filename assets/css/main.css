@@ -1604,6 +1604,7 @@
 
 			h2.alt strong {
 				color: #666;
+				font-weight: bold;
 			}
 
 	h3 {
@@ -1981,7 +1982,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 375px;
+		width: 250px;
 		height: 100%;
 		color: #fff;
 		background: #222629 url("images/overlay.png");
@@ -2053,7 +2054,8 @@
 
 	#nav ul li a {
 		display: block;
-		padding: 0.5em 1.5em 0.5em 1.5em;
+		font-size: 0.8em;
+		padding: 0.5em;
 		color: rgba(255, 255, 255, 0.5);
 		text-decoration: none;
 		outline: 0;
@@ -2064,19 +2066,21 @@
 		transition: none;
 	}
 
-		#nav ul li a span {
-			position: relative;
-			display: block;
-			font-size: 0.8em;
-		}
+			#nav ul li a span {
+				position: relative;
+				display: block;
+				font-size: 0.8em;
+				padding-right: 2.25em;
+			}
 
 			#nav ul li a span:before {
 				position: absolute;
-				left: 0;
 				color: #41484c;
 				text-align: center;
 				width: 1.25em;
-				line-height: 1.75em;
+				left: 100%;
+				margin-left: -1.25em;
+				line-height: 2.25em;
 			}
 
 		#nav ul li a.active {
@@ -2092,7 +2096,7 @@
 /* Footer */
 
 	#footer {
-		margin-left: 375px;
+		margin-left: 250px;
 		text-align: center;
 		background-color: #dce3e2;
 		padding: 3em 0 4em 0;
@@ -2122,7 +2126,7 @@
 /* Main */
 
 	#main {
-		margin-left: 375px;
+		margin-left: 250px;
 	}
 
 		#main > section {
@@ -2180,36 +2184,6 @@
 				background-color: #e8edec;
 			}
 
-/* Wide */
-
-	@media screen and (min-width: 961px) and (max-width: 1880px) {
-
-		/* Basic */
-
-			body, input, textarea, select {
-				font-size: 17pt;
-			}
-
-		/* Header */
-
-			#header {
-				width: 300px;
-			}
-
-		/* Footer */
-
-			#footer {
-				margin-left: 300px;
-			}
-
-		/* Main */
-
-			#main {
-				margin-left: 300px;
-			}
-
-	}
-
 /* Normal */
 
 	@media screen and (min-width: 961px) and (max-width: 1620px) {
@@ -2262,22 +2236,6 @@
 				position: relative;
 				margin: 0 0 0.5em 0;
 			}
-
-			#nav ul li a {
-				font-size: 0.8em;
-				padding-top: 0.5em;
-				padding-bottom: 0.5em;
-			}
-
-				#nav ul li a span {
-					padding-right: 2.25em;
-				}
-
-					#nav ul li a span:before {
-						left: 100%;
-						margin-left: -1.25em;
-						line-height: 2.25em;
-					}
 
 		/* Footer */
 
@@ -2539,3 +2497,36 @@
 				}
 
 	}
+
+/* ephraim pei mods */
+
+#contact > .container > .icons > li > a {
+	font-size: 100px;
+}
+
+#contact > .container > .resume {
+	font-size: 100px;
+	border: 0;
+}
+
+#top {
+	max-height: 900px;
+}
+
+#top {
+	max-height: 1000px;
+}
+
+#top > .container {
+	margin: 450px 0 0 0;
+	width: 100%;
+}
+
+#top > .container > header {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#header .top > nav {
+	margin-right: 1.5em
+}
