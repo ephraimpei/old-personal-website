@@ -2530,3 +2530,24 @@
 #header .top > nav {
 	margin-right: 1.5em
 }
+
+#skills > .container > .skills-icons {
+	width: 1100px;
+	margin: auto;
+}
+
+#skills > .container > .skills-icons > li {
+	float: left;
+	padding: 20px 30px;
+}
+
+#skills > .container > .skills-icons > li > img {
+	width: 150px;
+	height: 150px;
+}
+
+.group:after {
+	content: "";
+	display: block;
+	clear: both;
+}
