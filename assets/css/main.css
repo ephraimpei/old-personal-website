@@ -2500,6 +2500,16 @@
 
 /* ephraim pei mods */
 
+.group:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#main > section {
+	padding: 3em 0;
+}
+
 #contact > .container > .icons > li > a {
 	font-size: 100px;
 }
@@ -2510,15 +2520,11 @@
 }
 
 #top {
-	max-height: 900px;
-}
-
-#top {
-	max-height: 1000px;
+	height: 100vh;
 }
 
 #top > .container {
-	margin: 450px 0 0 0;
+	margin-top: 50vh;
 	width: 100%;
 }
 
@@ -2527,27 +2533,41 @@
 	margin: 0 auto;
 }
 
+#top > .container > footer{
+
+}
+
 #header .top > nav {
 	margin-right: 1.5em
 }
 
-#skills > .container > .skills-icons {
+#about > .container > .skills-icons {
 	width: 1000px;
 	margin: auto;
 }
 
-#skills > .container > .skills-icons > li {
+#about > .container > .skills-icons > li {
 	float: left;
-	padding: 20px 30px;
+	padding: 25px;
 }
 
-#skills > .container > .skills-icons > li > img {
-	width: 125px;
-	height: 125px;
+#about > .container > .skills-icons > li > h3 {
+	font-size: 1em;
 }
 
-.group:after {
-	content: "";
+#about > .container > .skills-icons > li > img {
+	height: 75px;
+}
+
+#about > .container > .skills-icons > li > .sap {
+	height: 100%:
+}
+
+#nom-noms > a > img {
 	display: block;
-	clear: both;
+  transition: transform 1s;
+}
+
+#nom-noms > a > img:hover {
+  transform: scale(1.1);
 }
