@@ -2563,11 +2563,34 @@
 	height: 100%:
 }
 
-#nom-noms > a > img {
-	display: block;
-  transition: transform 1s;
+.portfolio-app-link {
+	border: none;
 }
 
-#nom-noms > a > img:hover {
+.portfolio-app-wrapper > img {
+	display: block;
+  transition: transform 1s, -webkit-filter 1s, filter 1s;
+	height: 320px;
+}
+
+.portfolio-app-wrapper:hover .image {
   transform: scale(1.1);
+	-webkit-filter: blur(5px);
+	filter: blur(5px);
+}
+
+.portfolio-app-wrapper:hover .portfolio-app-options {
+	opacity: 1;
+}
+
+.portfolio-app-options:hover {
+	opacity: 1;
+}
+
+.portfolio-app-options {
+	opacity: 0;
+	transition: opacity 1s;
+	position: relative;
+	top: -200px;
+	height: 0px;
 }
