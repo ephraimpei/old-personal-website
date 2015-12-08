@@ -2594,3 +2594,9 @@
 	top: -200px;
 	height: 0px;
 }
+
+.portfolio-app-options > a {
+	width: 150px;
+	padding: .5em 1em;
+	margin: 0 1em;
+}
