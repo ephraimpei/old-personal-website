@@ -1946,7 +1946,8 @@
 		.item header {
 			background: #fff;
 			margin: 0;
-			padding: 1em 0 1em 0;
+			/*padding: 1em 0 1em 0;*/
+			padding: 1em;
 			font-size: 0.8em;
 		}
 
@@ -2599,9 +2600,18 @@
 .portfolio-app-options > a {
 	width: 150px;
 	padding: .5em 1em;
-	margin: 0 1em;
+	margin: 0 1em 1em 1em;
 }
 
 body > #main > #top {
 	padding: 0;
+}
+
+#portfolio-app > header > h3 > a {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#portfolio-app > header > h3 > p {
+	margin-bottom: 0;
 }
