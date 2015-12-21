@@ -2615,3 +2615,7 @@ body > #main > #top {
 #portfolio-app > header > h3 > p {
 	margin-bottom: 0;
 }
+
+#portfolio > .container > .row {
+	padding: 0 0 1em 0;
+}
