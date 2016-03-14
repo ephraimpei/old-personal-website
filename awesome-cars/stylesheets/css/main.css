@@ -1,0 +1,253 @@
+.group:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+html, body, h1, h2, h3, div, section, article, nav, header, aside, footer, ul, li, a, figure, button, textarea, form, label {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font: inherit;
+  vertical-align: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent; }
+
+ul {
+  list-style: none; }
+
+input, textarea {
+  outline: 0; }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+html, body {
+  height: 100%; }
+
+body {
+  background-color: #E4F2F3;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 16px; }
+
+button {
+  border: 1px solid #848c8b;
+  font-size: 1em;
+  color: #153d39;
+  border-radius: 2px; }
+
+.pseudo-input-wrapper {
+  border-radius: 2px;
+  border: 1px solid #848c8b;
+  background-color: #ffffff;
+  transition: border .2s ease-in-out, box-shadow .2s ease-in-out; }
+  .pseudo-input-wrapper .pseudo-input {
+    padding-left: 3px;
+    font-size: 1em; }
+    .pseudo-input-wrapper .pseudo-input .pseudo-content-curr {
+      padding-right: 3px; }
+    .pseudo-input-wrapper .pseudo-input input {
+      border: 0;
+      outline: 0;
+      font-size: 1em;
+      line-height: 1.7;
+      color: #153d39; }
+
+.on-enter {
+  border: 1px solid blue;
+  box-shadow: 0 0 5px blue; }
+
+.approval-range-wrapper {
+  margin: 20px 0; }
+  .approval-range-wrapper label {
+    display: block;
+    text-align: center;
+    font-size: .75em;
+    line-height: 1em;
+    color: #47abb4; }
+  .approval-range-wrapper .slider-wrapper span:first-child {
+    margin-right: 5px; }
+  .approval-range-wrapper .slider-wrapper span:last-child {
+    margin-left: 5px; }
+  .approval-range-wrapper .slider-wrapper .slider {
+    display: inline-block;
+    width: 152px;
+    vertical-align: middle; }
+    .approval-range-wrapper .slider-wrapper .slider .ui-slider-range {
+      background: #31766f; }
+    .approval-range-wrapper .slider-wrapper .slider .ui-slider-handle {
+      outline: 0;
+      cursor: pointer;
+      background: #31766f; }
+
+.error-message {
+  color: red;
+  font-size: .8em; }
+
+.navbar {
+  background-color: #76bcc2;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3); }
+  .navbar .navbar-container {
+    padding: 16px; }
+    .navbar .navbar-container .navbar-title {
+      color: #ffffff;
+      font-size: 1.5em;
+      float: left; }
+    .navbar .navbar-container .mobile-menu-icon {
+      display: none;
+      float: right;
+      width: 32px;
+      height: 32px;
+      color: #eee;
+      cursor: pointer; }
+
+/* tablets and phones - portrait and landscape modes */
+/* display menu icon */
+@media only screen and (max-width: 800px) {
+  .navbar .navbar-container .mobile-menu-icon {
+    display: block; } }
+.available-cars-page {
+  position: relative;
+  margin: 32px 0;
+  display: flex;
+  flex-direction: row; }
+
+.cars-options-wrapper {
+  width: 262px;
+  transition: left .2s ease-in-out; }
+  .cars-options-wrapper .cars-options {
+    display: flex;
+    flex-direction: column;
+    padding: 11px 16px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    font-size: .875em;
+    line-height: 1.3;
+    color: #848c8b; }
+    .cars-options-wrapper .cars-options label {
+      margin: 5px 0; }
+
+.pseudo-input-wrapper.price-input-wrapper .pseudo-input .price-input {
+  width: 80%; }
+
+.trade-in-value-wrapper {
+  display: flex;
+  flex-direction: row; }
+  .trade-in-value-wrapper .pseudo-input-wrapper .pseudo-input .trade-in-input {
+    width: 60%; }
+  .trade-in-value-wrapper .pseudo-input-wrapper .pseudo-input .trade-in-percent {
+    width: 50%; }
+  .trade-in-value-wrapper .pseudo-input-wrapper:nth-child(1) {
+    width: 60%;
+    margin-right: 10%; }
+  .trade-in-value-wrapper .pseudo-input-wrapper:nth-child(2) {
+    width: 30%; }
+
+/* tablets and phones - portrait and landscape modes */
+/* hide car options form */
+@media only screen and (max-width: 800px) {
+  .cars-options-wrapper {
+    position: absolute;
+    z-index: 1;
+    left: -262px; }
+
+  .cars-options-wrapper.visible {
+    left: 0; } }
+.cars-index-wrapper .cars-index {
+  width: 700px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .cars-index-wrapper .cars-index h3 {
+    font-size: 2.33em;
+    line-height: 42px;
+    color: #153d39; }
+  .cars-index-wrapper .cars-index p {
+    font-size: 1.125em;
+    color: #848c8b; }
+.cars-index-wrapper .load-more {
+  display: block;
+  margin: 0 auto;
+  outline: 0;
+  width: 100px;
+  height: 50px;
+  background: #ffffff;
+  text-align: center;
+  cursor: pointer; }
+.cars-index-wrapper .load-more:hover, .cars-index-wrapper .load-more.disabled {
+  background: #eeeeee; }
+.cars-index-wrapper .load-more:active {
+  box-shadow: inset 0 5px 30px #193047; }
+.cars-index-wrapper label.no-more-data {
+  display: block;
+  text-align: center;
+  margin-top: 20px; }
+
+/* tablets - portrait mode */
+@media only screen and (max-width: 800px) and (orientation: portrait) {
+  .cars-index-wrapper {
+    width: 100%; }
+    .cars-index-wrapper .cars-index {
+      margin: auto; } }
+/* phones - landscape mode */
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  .cars-index-wrapper {
+    width: 100%; }
+    .cars-index-wrapper .cars-index {
+      margin: auto;
+      width: 550px; } }
+/* phones - portrait mode */
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+  .cars-index-wrapper .cars-index {
+    width: 260px; } }
+.car-index-item {
+  width: 300px;
+  height: 300px;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  position: relative; }
+  .car-index-item label {
+    font-size: 16px;
+    color: #848c8b;
+    line-height: 26px; }
+  .car-index-item .car-index-item-name {
+    float: left; }
+  .car-index-item .car-index-item-price {
+    float: right; }
+  .car-index-item .car-index-item-img {
+    width: 75%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute; }
+
+.car-index-item:nth-child(2n) {
+  margin-left: 20px; }
+
+.car-index-item:nth-child(n+2) {
+  margin-top: 20px; }
+
+/* phones - landscape mode */
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  .car-index-item {
+    width: 225px;
+    height: 225px; } }
+/* phones - portrait mode */
+@media only screen and (max-width: 414px) and (orientation: portrait) {
+  .car-index-item {
+    width: 260px;
+    height: 260px; }
+
+  .car-index-item:nth-child(2n) {
+    margin-left: 0; }
+
+  .car-index-item:last-child {
+    margin-bottom: 20px; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,33 @@
+.pseudo-input-wrapper
+{
+  border-radius: 2px;
+  border: 1px solid #848c8b;
+  background-color: #ffffff;
+  transition: border .2s ease-in-out, box-shadow .2s ease-in-out;
+
+  .pseudo-input
+  {
+    padding-left: 3px;
+    font-size: 1em;
+
+    .pseudo-content-curr
+    {
+      padding-right: 3px;
+    }
+
+    input
+    {
+      border: 0;
+      outline: 0;
+      font-size: 1em;
+      line-height: 1.7;
+      color: #153d39;
+    }
+  }
+}
+
+.on-enter
+{
+  border: 1px solid blue;
+  box-shadow: 0 0 5px blue;
+}

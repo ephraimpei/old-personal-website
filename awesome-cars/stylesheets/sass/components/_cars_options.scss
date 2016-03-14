@@ -1,0 +1,82 @@
+.cars-options-wrapper
+{
+  width: 262px;
+  transition: left .2s ease-in-out;
+
+  .cars-options
+  {
+    display: flex;
+    flex-direction: column;
+    padding: 11px 16px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    font-size: .875em;
+    line-height: 1.3;
+    color: #848c8b;
+
+    label
+    {
+      margin: 5px 0;
+    }
+  }
+}
+
+.pseudo-input-wrapper.price-input-wrapper
+{
+  .pseudo-input
+  {
+    .price-input
+    {
+      width: 80%;
+    }
+  }
+}
+
+.trade-in-value-wrapper
+{
+  display: flex;
+  flex-direction: row;
+
+  .pseudo-input-wrapper
+  {
+    .pseudo-input
+    {
+      .trade-in-input
+      {
+        width: 60%;
+      }
+      .trade-in-percent
+      {
+        width: 50%;
+      }
+    }
+  }
+
+  .pseudo-input-wrapper:nth-child(1)
+  {
+    width: 60%;
+    margin-right: 10%;
+  }
+
+  .pseudo-input-wrapper:nth-child(2)
+  {
+    width: 30%;
+  }
+}
+
+/* tablets and phones - portrait and landscape modes */
+/* hide car options form */
+@media only screen and (max-width: 800px)
+{
+  .cars-options-wrapper
+  {
+    position: absolute;
+    z-index: 1;
+    left: -262px;
+  }
+
+  .cars-options-wrapper.visible
+  {
+    left: 0;
+  }
+}

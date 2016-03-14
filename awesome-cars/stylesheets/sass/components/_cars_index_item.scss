@@ -1,0 +1,75 @@
+.car-index-item
+{
+  width: 300px;
+  height: 300px;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+
+  label
+  {
+    font-size: 16px;
+    color: #848c8b;
+    line-height: 26px;
+  }
+
+  .car-index-item-name
+  {
+    float: left;
+  }
+
+  .car-index-item-price
+  {
+    float: right;
+  }
+
+  .car-index-item-img
+  {
+    width: 75%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+  }
+}
+
+.car-index-item:nth-child(2n)
+{
+  margin-left: 20px;
+}
+
+.car-index-item:nth-child(n+2)
+{
+  margin-top: 20px;
+}
+
+/* phones - landscape mode */
+@media only screen and (max-width: 736px) and (orientation: landscape)
+{
+  .car-index-item
+  {
+    width: 225px;
+    height: 225px;
+  }
+}
+
+/* phones - portrait mode */
+@media only screen and (max-width: 414px) and (orientation: portrait)
+{
+  .car-index-item
+  {
+    width: 260px;
+    height: 260px;
+  }
+
+  .car-index-item:nth-child(2n)
+  {
+    margin-left: 0;
+  }
+
+  .car-index-item:last-child
+  {
+    margin-bottom: 20px;
+  }
+}

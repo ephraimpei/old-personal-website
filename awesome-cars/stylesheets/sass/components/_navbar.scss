@@ -1,0 +1,43 @@
+.navbar
+{
+  background-color: #76bcc2;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+
+  .navbar-container
+  {
+    padding: 16px;
+
+    .navbar-title
+    {
+      color: #ffffff;
+      font-size: 1.5em;
+      float: left;
+    }
+
+    .mobile-menu-icon
+    {
+      display: none;
+      float: right;
+      width: 32px;
+      height: 32px;
+      color: #eee;
+      cursor: pointer;
+    }
+  }
+}
+
+/* tablets and phones - portrait and landscape modes */
+/* display menu icon */
+@media only screen and (max-width: 800px)
+{
+  .navbar
+  {
+    .navbar-container
+    {
+      .mobile-menu-icon
+      {
+        display: block;
+      }
+    }
+  }
+}
