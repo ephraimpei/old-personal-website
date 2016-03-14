@@ -2,41 +2,41 @@
 
 // Purchase Price input box
 
-const checkAndRemovePurchasePriceErrMessages = () => {
+var checkAndRemovePurchasePriceErrMessages = function checkAndRemovePurchasePriceErrMessages() {
   if ($(".invalid-price-message").length > 0) {
     $(".invalid-price-message").remove();
   }
 };
 
-const getNewData = price => {
+var getNewData = function getNewData(price) {
   $(".car-index-item").remove();
-  const carDataSet = createDataSet(12, price);
-  const carIndexItems = createCarIndexItems(carDataSet);
+  var carDataSet = createDataSet(12, price);
+  var carIndexItems = createCarIndexItems(carDataSet);
   carsIndex.append(carIndexItems);
 };
 
-const updateTradeInInputValue = (price, percent) => {
-  const updatedTradeInValue = price * percent / 100;
+var updateTradeInInputValue = function updateTradeInInputValue(price, percent) {
+  var updatedTradeInValue = price * percent / 100;
 
   // round trade in value to 2 decimal places
   // tradeInInput.val(Math.round(updatedTradeInValue * 100) / 100)
   tradeInInput.val(Math.round(updatedTradeInValue));
 };
 
-const updatePriceSlider = price => {
+var updatePriceSlider = function updatePriceSlider(price) {
   priceSlider.slider("value", price);
 };
 
-priceInput.on("input", e => {
+priceInput.on("input", function (e) {
   // remove error message(s) if there are any
   checkAndRemovePurchasePriceErrMessages();
 });
 
-priceInput.keypress(e => {
+priceInput.keypress(function (e) {
   if (e.which === 13) {
-    const input = e.currentTarget.value;
-    const currentPercent = parseInt(percentInput.val());
-    const validityEventType = priceValidityChecker(input, currentPercent);
+    var input = e.currentTarget.value;
+    var currentPercent = parseInt(percentInput.val());
+    var validityEventType = priceValidityChecker(input, currentPercent);
 
     // if input is valid, create (fetch) new content and update other fields
     // else create error message
@@ -45,48 +45,48 @@ priceInput.keypress(e => {
       fadeInputBoxOutline(tradeInValueBox);
 
       priceInput.val(input);
-      const price = parseInt(input);
-      const percent = parseInt(currentPercent);
+      var price = parseInt(input);
+      var percent = parseInt(currentPercent);
 
       newDataHandler();
       updateTradeInInputValue(price, percent);
       updatePriceSlider(price);
       getNewData(price);
     } else {
-      const errMsg = getErrorMessage("purchase-price", validityEventType);
+      var errMsg = getErrorMessage("purchase-price", validityEventType);
       appendErrMsgHandler(errMsg);
     }
   }
 });
 
 // Trade-in Value input box
-const checkAndRemoveTradeInErrMessages = () => {
+var checkAndRemoveTradeInErrMessages = function checkAndRemoveTradeInErrMessages() {
   if ($(".invalid-trade-in-message").length > 0) {
     $(".invalid-trade-in-message").remove();
   }
 };
 
-const updateTradeInSlider = percentValue => {
+var updateTradeInSlider = function updateTradeInSlider(percentValue) {
   tradeInSlider.val(percentValue);
   tradeInSliderMarker.css("left", percentValue + "%");
 };
 
-const updateTradeInPercentageValue = (value, currentPrice) => {
-  const percentValue = Math.round(value / currentPrice * 100);
+var updateTradeInPercentageValue = function updateTradeInPercentageValue(value, currentPrice) {
+  var percentValue = Math.round(value / currentPrice * 100);
   percentInput.val(percentValue);
   updateTradeInSlider(percentValue);
 };
 
-tradeInInput.on("input", e => {
+tradeInInput.on("input", function (e) {
   checkAndRemoveTradeInErrMessages();
 });
 
-tradeInInput.keypress(e => {
+tradeInInput.keypress(function (e) {
   if (e.which === 13) {
-    const input = e.currentTarget.value;
-    const currentPrice = parseInt(priceInput.val());
+    var input = e.currentTarget.value;
+    var currentPrice = parseInt(priceInput.val());
 
-    const validityEventType = tradeInValidityChecker(input, currentPrice);
+    var validityEventType = tradeInValidityChecker(input, currentPrice);
 
     // if input is valid, update other fields
     // else create error message
@@ -95,33 +95,33 @@ tradeInInput.keypress(e => {
       fadeInputBoxOutline(tradeInValueBox);
 
       tradeInInput.val(input);
-      const tradeInValue = parseInt(input);
+      var tradeInValue = parseInt(input);
 
       updateTradeInPercentageValue(tradeInValue, currentPrice);
     } else {
-      const errMsg = getErrorMessage("trade-in-value", validityEventType, currentPrice);
+      var errMsg = getErrorMessage("trade-in-value", validityEventType, currentPrice);
       appendErrMsgHandler(errMsg);
     }
   }
 });
 
 // Trade-in Percentage input box
-const updateTradeInPercentSlider = percent => {
+var updateTradeInPercentSlider = function updateTradeInPercentSlider(percent) {
   // tradeInSlider.val(percent);
   // tradeInSliderMarker.css("left", percent + "%");
   percentSlider.slider("value", percent);
 };
 
-percentInput.on("input", e => {
+percentInput.on("input", function (e) {
   checkAndRemoveTradeInErrMessages();
 });
 
-percentInput.keypress(e => {
+percentInput.keypress(function (e) {
   if (e.which === 13) {
-    const input = e.currentTarget.value;
-    const currentPrice = parseInt(priceInput.val());
+    var input = e.currentTarget.value;
+    var currentPrice = parseInt(priceInput.val());
 
-    const validityEventType = percentageValidityChecker(input, currentPrice);
+    var validityEventType = percentageValidityChecker(input, currentPrice);
 
     // if input is valid, update other fields
     // else create error message
@@ -130,11 +130,11 @@ percentInput.keypress(e => {
       fadeInputBoxOutline(tradeInValueBox);
 
       percentInput.val(input);
-      const percent = parseInt(input);
+      var percent = parseInt(input);
       updateTradeInInputValue(currentPrice, percent);
       updateTradeInPercentSlider(percent);
     } else {
-      const errMsg = getErrorMessage("trade-in-percent", validityEventType);
+      var errMsg = getErrorMessage("trade-in-percent", validityEventType);
       appendErrMsgHandler(errMsg);
     }
   }

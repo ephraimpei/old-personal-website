@@ -1,7 +1,7 @@
 'use strict';
 
-const getErrorMessage = (origin, eventType, currentPrice) => {
-  let text;
+var getErrorMessage = function getErrorMessage(origin, eventType, currentPrice) {
+  var text = void 0;
 
   if (eventType === 1) {
     text = "Please enter a valid number";
@@ -31,11 +31,11 @@ const getErrorMessage = (origin, eventType, currentPrice) => {
     }
   }
 
-  return { text, origin, eventType };
+  return { text: text, origin: origin, eventType: eventType };
 };
 
-const appendErrMsgHandler = message => {
-  const errMsgElement = $(document.createElement("label"));
+var appendErrMsgHandler = function appendErrMsgHandler(message) {
+  var errMsgElement = $(document.createElement("label"));
   errMsgElement.text(message.text);
 
   if (message.origin === "purchase-price") {

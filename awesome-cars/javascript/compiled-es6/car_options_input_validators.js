@@ -1,11 +1,11 @@
 'use strict';
 
-const priceValidityChecker = (input, currentPercent) => {
+var priceValidityChecker = function priceValidityChecker(input, currentPercent) {
   // price validity event types:
   // 0 - input is valid
   // 1 - input is not a number
   // 2 - number is not between 0 and 100000
-  const coercedInput = parseInt(input);
+  var coercedInput = parseInt(input);
 
   if (isNaN(coercedInput)) {
     return 1;
@@ -18,13 +18,13 @@ const priceValidityChecker = (input, currentPercent) => {
   }
 };
 
-const tradeInValidityChecker = (input, currentPrice) => {
+var tradeInValidityChecker = function tradeInValidityChecker(input, currentPrice) {
   // price validity event types:
   // 0 - input is valid
   // 1 - input is not a number
   // 2 - purchase price input box is not filled in or is not a valid number
   // 3 - number is not between 0 and current purchase price
-  const coercedInput = parseInt(input);
+  var coercedInput = parseInt(input);
 
   if (isNaN(coercedInput)) {
     return 1;
@@ -37,13 +37,13 @@ const tradeInValidityChecker = (input, currentPrice) => {
   }
 };
 
-const percentageValidityChecker = (input, currentPrice) => {
+var percentageValidityChecker = function percentageValidityChecker(input, currentPrice) {
   // price validity event types:
   // 0 - input is valid
   // 1 - input is not a number
   // 2 - purchase price input box is not filled in or is not a valid number
   // 3 - number is not between 0 and 100
-  const coercedInput = parseInt(input);
+  var coercedInput = parseInt(input);
 
   if (isNaN(coercedInput)) {
     return 1;

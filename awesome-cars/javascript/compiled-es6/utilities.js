@@ -2,23 +2,25 @@
 
 // create cars data
 
-const createDataSet = (n, ceiling) => {
-  const dataSetSize = n,
-        maxPrice = ceiling || 100000;
+var createDataSet = function createDataSet(n, ceiling) {
+  var dataSetSize = n,
+      maxPrice = ceiling || 100000;
 
   // create an array from 0 to dataSetSize
-  const dataSetArray = Array.apply(0, Array(dataSetSize)).map((undefined, idx) => idx);
+  var dataSetArray = Array.apply(0, Array(dataSetSize)).map(function (undefined, idx) {
+    return idx;
+  });
 
   // colors array is shuffled to get the sense that new data has been fetched
-  const carColors = ["black", "blue", "green", "red", "silver", "yellow"].shuffle();
+  var carColors = ["black", "blue", "green", "red", "silver", "yellow"].shuffle();
 
   // create the cars data set w/ functional programming techniques :)
-  const carsDataSet = dataSetArray.map(n => {
-    const color = carColors[n % carColors.length];
-    const name = `${ color } car`;
-    const imageURL = `./images/image-car-${ color }-2x.png`;
-    const price = Math.floor(Math.random() * (maxPrice - 1));
-    const priceUSDFormat = "$" + price.toLocaleString();
+  var carsDataSet = dataSetArray.map(function (n) {
+    var color = carColors[n % carColors.length];
+    var name = color + " car";
+    var imageURL = "./images/image-car-" + color + "-2x.png";
+    var price = Math.floor(Math.random() * (maxPrice - 1));
+    var priceUSDFormat = "$" + price.toLocaleString();
 
     return {
       id: n,
@@ -34,21 +36,21 @@ const createDataSet = (n, ceiling) => {
 };
 
 // create car index DOM elements (using return value from createDataSet)
-const createCarIndexItems = carDataSet => {
-  return carDataSet.map(car => {
+var createCarIndexItems = function createCarIndexItems(carDataSet) {
+  return carDataSet.map(function (car) {
     // create carIndexItem container
-    let carIndexItem = $(document.createElement("div"));
+    var carIndexItem = $(document.createElement("div"));
     carIndexItem.addClass("car-index-item");
 
-    let name = $(document.createElement("label"));
+    var name = $(document.createElement("label"));
     name.addClass("car-index-item-name");
     name.html(car.name);
 
-    let price = $(document.createElement("label"));
+    var price = $(document.createElement("label"));
     price.addClass("car-index-item-price");
     price.html(car.priceUSDFormat);
 
-    let image = $(document.createElement("img"));
+    var image = $(document.createElement("img"));
     image.addClass("car-index-item-img");
     image.attr("src", car.imageURL);
 
@@ -60,9 +62,9 @@ const createCarIndexItems = carDataSet => {
 
 // Fisher Yates shuffle
 Array.prototype.shuffle = function () {
-  let currentIndex = this.length,
-      temporaryValue,
-      randomIndex;
+  var currentIndex = this.length,
+      temporaryValue = void 0,
+      randomIndex = void 0;
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
@@ -82,24 +84,26 @@ Array.prototype.shuffle = function () {
 
 // fades in and out a blue border around input box argument
 // lets users know he/she just made a valid form submission
-const fadeInputBoxOutline = inputBox => {
+var fadeInputBoxOutline = function fadeInputBoxOutline(inputBox) {
   inputBox.addClass("on-enter");
-  setTimeout(() => inputBox.removeClass("on-enter"), 500);
+  setTimeout(function () {
+    return inputBox.removeClass("on-enter");
+  }, 500);
 };
 
 // gets called when there is no more data to load
 // disables loadMoreButton and appends label to cars index to let user know there is no more data
-const noMoreDataHandler = () => {
+var noMoreDataHandler = function noMoreDataHandler() {
   if (!window.noMoreData) {
     window.noMoreData = true;
     loadMoreButton.addClass("disabled").prop("disabled", true);
-    let finishedText = $(document.createElement("label")).text("No more cars to load.").addClass("no-more-data");
+    var finishedText = $(document.createElement("label")).text("No more cars to load.").addClass("no-more-data");
     carsIndexWrapper.append(finishedText);
   }
 };
 
 // undos noMoreDataHandler changes when getting data with the form
-const newDataHandler = () => {
+var newDataHandler = function newDataHandler() {
   window.noMoreData = false;
   loadMoreButton.removeClass("disabled").prop("disabled", false);
   $(".no-more-data").remove();

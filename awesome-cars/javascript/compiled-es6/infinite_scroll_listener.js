@@ -1,4 +1,6 @@
-$(document).scroll(e => {
+"use strict";
+
+$(document).scroll(function (e) {
   // check if user scrolled all the way to the bottom of the document
   // if so, load more data
   if ($(window).scrollTop() >= $(document).height() - $(window).height()) {
