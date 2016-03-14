@@ -68,20 +68,22 @@ button {
     font-size: .75em;
     line-height: 1em;
     color: #47abb4; }
-  .approval-range-wrapper .slider-wrapper span:first-child {
-    margin-right: 5px; }
-  .approval-range-wrapper .slider-wrapper span:last-child {
-    margin-left: 5px; }
-  .approval-range-wrapper .slider-wrapper .slider {
-    display: inline-block;
-    width: 152px;
-    vertical-align: middle; }
-    .approval-range-wrapper .slider-wrapper .slider .ui-slider-range {
-      background: #31766f; }
-    .approval-range-wrapper .slider-wrapper .slider .ui-slider-handle {
-      outline: 0;
-      cursor: pointer;
-      background: #31766f; }
+  .approval-range-wrapper .slider-wrapper {
+    white-space: nowrap; }
+    .approval-range-wrapper .slider-wrapper span:first-child {
+      margin-right: 5px; }
+    .approval-range-wrapper .slider-wrapper span:last-child {
+      margin-left: 5px; }
+    .approval-range-wrapper .slider-wrapper .slider {
+      display: inline-block;
+      width: 152px;
+      vertical-align: middle; }
+      .approval-range-wrapper .slider-wrapper .slider .ui-slider-range {
+        background: #31766f; }
+      .approval-range-wrapper .slider-wrapper .slider .ui-slider-handle {
+        outline: 0;
+        cursor: pointer;
+        background: #31766f; }
 
 .error-message {
   color: red;
