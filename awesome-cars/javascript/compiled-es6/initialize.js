@@ -1,6 +1,7 @@
 'use strict';
 
 // create initial data set
+
 window.noMoreData = false;
 const batchDataSize = 12;
 const maxDataSize = 40;
@@ -41,7 +42,7 @@ percentSlider.slider({
 });
 
 // add click handler to Load More button
-loadMoreButton.click( (e) => {
+loadMoreButton.click(e => {
   e.preventDefault();
 
   // disable load more button if max data size reached
@@ -55,7 +56,7 @@ loadMoreButton.click( (e) => {
 });
 
 // add click handler to mobile menu icon to toggle menu
-mobileMenuIcon.click( (e) => {
+mobileMenuIcon.click(e => {
   e.preventDefault();
 
   carOptionsForm.toggleClass("visible");

@@ -202,10 +202,12 @@ button {
     width: 100%; }
     .cars-index-wrapper .cars-index {
       margin: auto;
-      width: 550px; } }
+      margin-bottom: 30px;
+      width: 450px; } }
 /* phones - portrait mode */
 @media only screen and (max-width: 414px) and (orientation: portrait) {
   .cars-index-wrapper .cars-index {
+    margin-bottom: 30px;
     width: 260px; } }
 .car-index-item {
   width: 300px;
@@ -238,8 +240,8 @@ button {
 /* phones - landscape mode */
 @media only screen and (max-width: 736px) and (orientation: landscape) {
   .car-index-item {
-    width: 225px;
-    height: 225px; } }
+    width: 175px;
+    height: 175px; } }
 /* phones - portrait mode */
 @media only screen and (max-width: 414px) and (orientation: portrait) {
   .car-index-item {

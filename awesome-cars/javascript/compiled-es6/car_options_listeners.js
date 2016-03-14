@@ -1,13 +1,14 @@
 'use strict';
 
 // Purchase Price input box
+
 const checkAndRemovePurchasePriceErrMessages = () => {
   if ($(".invalid-price-message").length > 0) {
     $(".invalid-price-message").remove();
   }
 };
 
-const getNewData = (price) => {
+const getNewData = price => {
   $(".car-index-item").remove();
   const carDataSet = createDataSet(12, price);
   const carIndexItems = createCarIndexItems(carDataSet);
@@ -15,23 +16,23 @@ const getNewData = (price) => {
 };
 
 const updateTradeInInputValue = (price, percent) => {
-  const updatedTradeInValue = (price * percent) / 100;
+  const updatedTradeInValue = price * percent / 100;
 
   // round trade in value to 2 decimal places
   // tradeInInput.val(Math.round(updatedTradeInValue * 100) / 100)
-  tradeInInput.val(Math.round(updatedTradeInValue))
+  tradeInInput.val(Math.round(updatedTradeInValue));
 };
 
-const updatePriceSlider = (price) => {
+const updatePriceSlider = price => {
   priceSlider.slider("value", price);
 };
 
-priceInput.on("input", (e) => {
+priceInput.on("input", e => {
   // remove error message(s) if there are any
   checkAndRemovePurchasePriceErrMessages();
 });
 
-priceInput.keypress( (e) => {
+priceInput.keypress(e => {
   if (e.which === 13) {
     const input = e.currentTarget.value;
     const currentPercent = parseInt(percentInput.val());
@@ -65,22 +66,22 @@ const checkAndRemoveTradeInErrMessages = () => {
   }
 };
 
-const updateTradeInSlider = (percentValue) => {
+const updateTradeInSlider = percentValue => {
   tradeInSlider.val(percentValue);
   tradeInSliderMarker.css("left", percentValue + "%");
 };
 
 const updateTradeInPercentageValue = (value, currentPrice) => {
-  const percentValue = Math.round((value / currentPrice) * 100);
+  const percentValue = Math.round(value / currentPrice * 100);
   percentInput.val(percentValue);
   updateTradeInSlider(percentValue);
-}
+};
 
-tradeInInput.on("input", (e) => {
+tradeInInput.on("input", e => {
   checkAndRemoveTradeInErrMessages();
 });
 
-tradeInInput.keypress( (e) => {
+tradeInInput.keypress(e => {
   if (e.which === 13) {
     const input = e.currentTarget.value;
     const currentPrice = parseInt(priceInput.val());
@@ -105,17 +106,17 @@ tradeInInput.keypress( (e) => {
 });
 
 // Trade-in Percentage input box
-const updateTradeInPercentSlider = (percent) => {
+const updateTradeInPercentSlider = percent => {
   // tradeInSlider.val(percent);
   // tradeInSliderMarker.css("left", percent + "%");
   percentSlider.slider("value", percent);
 };
 
-percentInput.on("input", (e) => {
+percentInput.on("input", e => {
   checkAndRemoveTradeInErrMessages();
 });
 
-percentInput.keypress( (e) => {
+percentInput.keypress(e => {
   if (e.which === 13) {
     const input = e.currentTarget.value;
     const currentPrice = parseInt(priceInput.val());

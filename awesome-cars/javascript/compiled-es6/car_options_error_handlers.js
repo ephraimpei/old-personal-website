@@ -9,26 +9,32 @@ const getErrorMessage = (origin, eventType, currentPrice) => {
     switch (origin) {
       case "purchase-price":
         switch (eventType) {
-          case 2: text = "Please make sure trade percent input is valid"; break;
-          case 3: text = "Please enter a value from 0 to 100000"; break;
-      } break;
+          case 2:
+            text = "Please make sure trade percent input is valid";break;
+          case 3:
+            text = "Please enter a value from 0 to 100000";break;
+        }break;
       case "trade-in-value":
         switch (eventType) {
-          case 2: text = "Please make sure purchase price is a valid input"; break;
-          case 3: text = "Please enter a trade in value from 0 to " + currentPrice; break;
-      } break;
+          case 2:
+            text = "Please make sure purchase price is a valid input";break;
+          case 3:
+            text = "Please enter a trade in value from 0 to " + currentPrice;break;
+        }break;
       case "trade-in-percent":
         switch (eventType) {
-          case 2: text = "Please make sure purchase price is a valid input"; break;
-          case 3: text = "Please enter a percent value from 0 to 100"; break;
-      } break;
+          case 2:
+            text = "Please make sure purchase price is a valid input";break;
+          case 3:
+            text = "Please enter a percent value from 0 to 100";break;
+        }break;
     }
   }
 
   return { text, origin, eventType };
 };
 
-const appendErrMsgHandler = (message) => {
+const appendErrMsgHandler = message => {
   const errMsgElement = $(document.createElement("label"));
   errMsgElement.text(message.text);
 
@@ -49,4 +55,4 @@ const appendErrMsgHandler = (message) => {
       tradeInValueWrapper.before(errMsgElement);
     }
   }
-}
+};

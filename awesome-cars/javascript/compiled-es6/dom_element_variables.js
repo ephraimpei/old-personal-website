@@ -1,6 +1,7 @@
 'use strict';
 
 // carIndexItems to be appended to carsIndex
+
 const carsIndex = $(".cars-index");
 
 // carIndex Wrapper element (label appended when max data size reached)
