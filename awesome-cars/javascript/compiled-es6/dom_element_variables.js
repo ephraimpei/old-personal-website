@@ -14,7 +14,9 @@ var percentInput = $(".trade-in-percent");
 
 // slider elements
 var priceSlider = $(".purchase-price-slider");
+var priceSliderHandle = $(".purchase-price-slider.ui-slider-handle");
 var percentSlider = $(".percent-slider");
+var percentSliderHandle = $(".percent-slider.ui-slider-handle");
 
 // elements where error messages will be prepended to
 var priceInputWrapper = $(".price-input-wrapper");

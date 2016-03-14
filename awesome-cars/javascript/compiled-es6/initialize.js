@@ -41,6 +41,10 @@ percentSlider.slider({
   }
 });
 
+// enable touch interaction on jQuery sliders
+priceSliderHandle.draggable();
+percentSliderHandle.draggable();
+
 // add click handler to Load More button
 loadMoreButton.click(function (e) {
   e.preventDefault();
